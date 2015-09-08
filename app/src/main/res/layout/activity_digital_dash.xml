@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#000101"
+    tools:context=".DigitalDashActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="false"
+
+        android:columnCount="4"
+        >
+
+        <TextView
+            android:text="Digital Dash"
+            android:textSize="32dip"
+
+            android:layout_columnSpan="4"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:text="RPM:"
+
+            android:layout_gravity="right"
+            />
+        <TextView
+            android:id="@+id/tvRPM"
+            />
+
+        <TextView
+            android:text="Speed:"
+
+            android:layout_column="0"
+            android:layout_gravity="right"
+            />
+        <TextView
+            android:id="@+id/tvSpeed"
+            />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_gravity="fill" />
+    </GridLayout>
+
+</FrameLayout>
